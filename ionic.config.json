@@ -1,0 +1,7 @@
+{
+  "name": "fakeWallet",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
