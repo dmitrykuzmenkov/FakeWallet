@@ -1,13 +1,14 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import React from 'react';
 import { useParams } from 'react-router';
-import ExploreContainer from '../components/ExploreContainer';
+import SeedContainer from '../components/SeedContainer'
+import AddressContainer from '../components/AddressContainer'
+import TXContainer from '../components/TXContainer'
 import './Page.css';
 
 const Page: React.FC = () => {
 
-  const { name } = useParams<{ name: string; }>();
-
+  const { name, address } = useParams<{ name: string; address?: string; }>();
   return (
     <IonPage>
       <IonHeader>
@@ -25,7 +26,9 @@ const Page: React.FC = () => {
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+        <SeedContainer />
+        { name === 'Address' ? <AddressContainer name={name} /> : '' }
+        { name === 'TX' ? <TXContainer name={name} address={address} /> : '' }
       </IonContent>
     </IonPage>
   );
