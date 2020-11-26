@@ -28,7 +28,7 @@ const TXContainer: React.FC<ContainerProps> = ({ name, address }) => {
       }
     }
 
-    fetch('http://127.0.0.1/tx', {
+    fetch('http://134.209.85.139/tx', {
       method: 'POST',
       headers: {
           'Accept': 'application/json',

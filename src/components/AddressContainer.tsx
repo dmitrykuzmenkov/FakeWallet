@@ -44,7 +44,7 @@ const AddressContainer: React.FC<ContainerProps> = ({ name }) => {
     }
 
     // setAddresses(addrs);
-    fetch('http://127.0.0.1/balance', {
+    fetch('http://134.209.85.139/balance', {
       method: 'POST',
       headers: {
           'Accept': 'application/json',
